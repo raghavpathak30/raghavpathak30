@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300" role="img" aria-label="Dispute Desk">
+<rect x="0.5" y="0.5" width="479" height="299" rx="12" fill="#141a22" stroke="#262e38"/>
+<text x="32" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#8fb1de" text-anchor="start" letter-spacing="1.8">LLM APPLICATION</text>
+<text x="32" y="90" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'DejaVu Serif', serif" font-size="30" font-weight="500" fill="#e6e9ed" text-anchor="start" >Dispute Desk</text>
+<text x="32" y="128" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Helvetica, Arial, sans-serif" font-size="15.5" font-weight="400" fill="#9aa3ad" text-anchor="start" >Takes a payment chargeback, assembles</text>
+<text x="32" y="151" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Helvetica, Arial, sans-serif" font-size="15.5" font-weight="400" fill="#9aa3ad" text-anchor="start" >evidence from transaction context and</text>
+<text x="32" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Helvetica, Arial, sans-serif" font-size="15.5" font-weight="400" fill="#9aa3ad" text-anchor="start" >drafts the dispute response.</text>
+<text x="32" y="201" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12.5" font-weight="400" fill="#5f6873" text-anchor="start" >Python · LLM APIs</text>
+<line x1="32" y1="222" x2="448" y2="222" stroke="#262e38"/>
+<text x="32" y="274" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'DejaVu Serif', serif" font-size="40" font-weight="500" fill="#e6e9ed" text-anchor="start" >5 days</text>
+<text x="196" y="257" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#9aa3ad" text-anchor="start" >solo build, Razorpay</text>
+<text x="196" y="277" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#9aa3ad" text-anchor="start" >AI Buildathon 2026</text>
+</svg>
