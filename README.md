@@ -1,62 +1,66 @@
 # Raghav Pathak
 
-### Applied Cryptography & Security Engineering · LNMIIT '27 · Cybersecurity Intern, Omni Infoword
+**Backend and AI engineering, with a security background.** Final-year CSE at LNMIIT Jaipur, graduating 2027.
 
-[Email](mailto:23ucs685@lnmiit.ac.in) · [LinkedIn](https://linkedin.com/in/<your-handle>)
+I build systems that are honest about what they don't know: an agent that answers *unknown* instead of guessing whether a CVE is reachable, a RAG pipeline that can only cite what it actually retrieved, and encrypted inference where the server never sees the data it scores.
 
-I build systems that compute on data they aren't allowed to see, and tooling that decides which vulnerabilities are actually worth fixing. Currently working on homomorphic-encryption inference with faculty at LNMIIT, and on LLM-assisted security tooling.
-
----
-
-## Experience
-
-**Omni Infoword Pvt. Ltd.** · Cybersecurity Intern · May–Jul 2026 (~7 weeks)
-SOC alert triage across Splunk, Microsoft Sentinel, QRadar and Elastic — suspicious-login investigation, phishing analysis, EDR policy management. Second half on application security: OWASP Top 10 testing of pre-release software, including exposed staging endpoints and sensitive files reported to the dev team.
-
-**LNMIIT** · Undergraduate Researcher · 2025–present
-Encrypted-inference and transciphering research with Prof. Debranjan Pal. Paper in preparation.
+[raghavpathak.me](https://raghavpathak.me) &nbsp;·&nbsp; [LinkedIn](https://linkedin.com/in/raghav-pathak-b14b46282) &nbsp;·&nbsp; [Email](mailto:raghavpathak0130@gmail.com)
 
 ---
 
-## Highlights
+### Now
 
-|  |  |
-|---|---|
-| **Grand Finalist** | PSB CyberShield 2026 — national hackathon, finale at IIT Hyderabad |
-| **HTB Academy** | Skilled rank · working the Bug Bounty Hunter path |
-| **Certification** | Google Cybersecurity Professional Certificate |
+- **Software Engineering Intern (AI & Automation), MarkeTreasure.** Auditing a rule-based equity screener (~12,000 stocks, ~30 years of daily OHLCV). 70+ defects catalogued so far; an independent review verified 61 of 68 audit claims and found none wrong.
+- **Undergraduate researcher, LNMIIT.** Comparing CKKS homomorphic-encryption inference against HERA and Rubato transciphering for fraud scoring on encrypted data, with Prof. Debranjan Pal. Paper in preparation.
+- **Building [reachability-triage](https://github.com/raghavpathak30/reachability-triage).** Releases are gated on hand-labelled evals.
 
 ---
 
-## Projects
+### Selected work
 
-- **[PPFDaaS](https://github.com/raghavpathak30/PPFDaaS)** — Fraud-detection inference over encrypted transactions. CKKS via Microsoft SEAL 4.1.2, C++17 gRPC server, Python client. The vendor never holds a secret key. Transciphering arm cuts client upload **249×** by shipping a symmetric ciphertext evaluated homomorphically server-side. Digest-pinned containers, cosign signatures, SBOMs.
+**[reachability-triage](https://github.com/raghavpathak30/reachability-triage)**: is this CVE actually reachable from my code?
+An AST call graph feeds a LangGraph tool-calling agent, which returns a verdict with evidence, or *unknown* when the evidence isn't there. Jobs run on PostgreSQL, and the React + TypeScript frontend uses an API client generated from the OpenAPI schema, so backend contract changes fail CI.
+→ 30 hand-labelled eval fixtures · 30 of 30 real-model runs with zero confident wrong verdicts
+`Python` `FastAPI` `PostgreSQL` `LangGraph` `React` `TypeScript` `Docker`
 
-- **[SetuGuard](https://github.com/raghavpathak30/SetuGuard)** — Android malware triage joined to mule-account detection. Static APK analysis → RAG reporting → YARA generation, plus a gradient-boosted account scorer linked on certificate-hash indicators. Measured **AUC 0.14** against a never-tuned-against corpus of real banking apps — the scorer ranks legitimate banks above malware, because both classes request the same permissions by construction. Documented rather than hidden.
+**[PPFDaaS](https://github.com/raghavpathak30/PPFDaaS)**: fraud-detection inference over encrypted transactions.
+CKKS via Microsoft SEAL 4.1.2, a C++17 gRPC server and a Python client. The vendor never holds a secret key. The transciphering arm ships a symmetric ciphertext that the server evaluates homomorphically.
+→ 249× smaller client upload · digest-pinned containers, cosign signatures, SBOMs
+`C++17` `Microsoft SEAL` `gRPC` `Python` `Docker`
 
-- **[reachability-triage](https://github.com/raghavpathak30/reachability-triage)** — Ingests OSV/GHSA advisories and determines whether a CVE is genuinely reachable from a given codebase. Python, FastAPI, PostgreSQL, Docker, GitHub Actions. In development.
+**[SetuGuard](https://github.com/raghavpathak30/SetuGuard)**: Android malware triage, Grand Finalist at PSB CyberShield 2026 (IIT Hyderabad).
+Static APK analysis feeds a RAG pipeline in which a local Mistral 7B emits a schema-constrained report. Citations are restricted to valid chunk IDs and pass through a grounding gate, and YARA rules are generated from the findings.
+→ zero failures across 7 hostile-input cases · scoring endpoint 11× faster, peak memory 2.9× lower
+`Python` `FAISS` `Mistral 7B`
 
-- **[PwnBot](https://github.com/raghavpathak30/PwnBot)** — LLM pentest assistant over the Groq API. Structured tool-output parsing and a scope guard that refuses targets outside the declared engagement.
+**[Dispute Desk](https://github.com/raghavpathak30/razorpay-disputedesk)**: LLM chargeback-evidence responder, Razorpay AI Buildathon 2026.
+Takes a payment chargeback, assembles evidence from transaction context, and drafts the dispute response. Built solo in 5 days.
+`Python` `LLM APIs`
+
+**PwnBot**: LLM pentest assistant over the Groq API, with structured tool-output parsing and a scope guard that refuses targets outside the declared engagement.
 
 ---
 
-## Notes
+### How I report numbers
 
-Every headline number in these repositories traces to a committed artifact file. Where a measurement turned out to be invalid — wrong parameter set, contaminated corpus, unreproducible host — the correction sits next to the original instead of replacing it. `MEASUREMENT_PROVENANCE.md` in PPFDaaS is the clearest example.
+Every headline number in these repositories traces to a committed artifact file. When a measurement turned out to be invalid (wrong parameter set, contaminated corpus, unreproducible host), the correction sits next to the original instead of replacing it. [`MEASUREMENT_PROVENANCE.md`](https://github.com/raghavpathak30/PPFDaaS) in PPFDaaS is the clearest example.
 
-**Working with:** C++17, Python, Go, Docker, Microsoft SEAL, gRPC, FastAPI, PostgreSQL, GitHub Actions, Linux.
+---
 
-<!--
-**raghavpathak30/raghavpathak30** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### Experience
 
-Here are some ideas to get you started:
+**MarkeTreasure Investment LLC** · Software Engineering Intern (AI & Automation) · Sep 2026 – present · remote
+**Omni Infoword** · Cybersecurity Intern · May – Jul 2026 (7 weeks): SOC alert triage across Splunk, Microsoft Sentinel, QRadar and Elastic, then an OWASP Top 10 test pass on pre-release software
+**LNMIIT** · Undergraduate Researcher · 2025 – present
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Also: Hack The Box Academy, Skilled rank · Google Cybersecurity Professional Certificate · Head of Sponsorship, Vivacity
+
+---
+
+### Stack
+
+**Languages** Python · TypeScript · C++17 · Go · SQL · Bash
+**Backend** FastAPI · PostgreSQL · SQLAlchemy · Alembic · gRPC · React
+**AI** LangGraph · tool calling · RAG (FAISS) · structured output · evals
+**Security & crypto** Microsoft SEAL (CKKS) · OWASP testing · Splunk · YARA
+**Infra** Docker · GitHub Actions · Linux · cosign · SBOMs
